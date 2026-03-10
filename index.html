@@ -16,26 +16,23 @@ background:#f5f5f5;
 text-align:center;
 }
 
-/* Top Logo Section */
+/* Top Header */
 
 .top-logo{
 position:sticky;
 top:0;
-background:white;
-padding:20px 0;
+background:#F4A460; /* কাঁঠালি কালার */
+padding:25px 0;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Animated Circle */
+/* Rotating Circle */
 
 .logo-circle{
-width:160px;
-height:160px;
+width:170px;
+height:170px;
 border-radius:50%;
 margin:auto;
-display:flex;
-align-items:center;
-justify-content:center;
 background:conic-gradient(
 red,
 orange,
@@ -46,29 +43,38 @@ blue,
 purple,
 red
 );
-animation:spin 4s linear infinite;
-padding:6px;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:spin 5s linear infinite;
+}
+
+/* Logo Wrapper (এই অংশ ঘুরবে না) */
+
+.logo-inner{
+width:145px;
+height:145px;
+background:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 /* Logo Image */
 
-.logo-circle img{
-width:140px;
-height:140px;
+.logo-inner img{
+width:135px;
+height:135px;
 border-radius:50%;
-background:white;
 object-fit:cover;
 }
 
 /* Animation */
 
 @keyframes spin{
-0%{
-transform:rotate(0deg);
-}
-100%{
-transform:rotate(360deg);
-}
+0%{ transform: rotate(0deg); }
+100%{ transform: rotate(360deg); }
 }
 
 /* Text Section */
@@ -88,11 +94,13 @@ color:#333;
 
 <body>
 
-<!-- Top Logo -->
+<!-- Header Logo -->
 
 <div class="top-logo">
 
 <div class="logo-circle">
+
+<div class="logo-inner">
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8-kFFlbmAjqLFjuzPY12eQz0ekzHceYVMl4ROIycO2LitEJti-yl3S1usI81g-T7m_GXhvknNi0-HKf5_8qEkuf-RXo-0I6pMbC7dIQNPFlbI0opiiPyBtSm4TCl2vw0nFTHY9dAzsTeYMbbWBk-NcFp5R_n-sryO1fvoOhTEfY5ori7KuiWx-ZUAjWM/s612/WhatsApp_Image_2026-03-10_at_11.54.05-removebg-preview.png" alt="logo">
 
@@ -100,8 +108,10 @@ color:#333;
 
 </div>
 
+</div>
 
-<!-- Text Content -->
+
+<!-- Content -->
 
 <div class="content">
 
