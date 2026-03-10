@@ -13,24 +13,19 @@ body {
     text-align: center;
 }
 
-/* Header Image Slider Wrapper */
-.header-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 /* Header Image Slider */
 .header-slider {
     width: 100%;
+    max-width: 900px;
     height: 250px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* Slider Images */
 .header-slider img {
     width: 100%;
     height: 100%;
@@ -46,30 +41,6 @@ body {
     opacity: 1;
 }
 
-/* Logo on top of slider */
-.logo-top {
-    width: 100px; /* লোগোর সাইজ */
-    height: 100px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    object-fit: cover;
-}
-
-.logo-top img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 /* Text Section */
 .content {
     max-width: 900px;
@@ -83,16 +54,10 @@ body {
 </head>
 <body>
 
-<!-- Header Slider with Logo -->
-<div class="header-wrapper">
-    <div class="header-slider">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJuGRVEod3SpwMemXfMexFtq_Y_cmnSJO4JfE3wyODazGfqYCpeF0pwMNIBe_3iotZrmtQPYIfQYztn_CjSZM65CVNkTJnpDms42uxHySjMQtpOvHxTFNgzMEwkFCcu1c6yHBiCS1f0bkldEaNYSh-lQr3Q1yZK9j2hzv5w_XDvbAM2gFE_0PX6pjxOnU/s1599/WhatsApp%20Image%202026-03-10%20at%2012.15.19%20(1).jpeg" class="active" alt="slider1">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3pc3yvtKTA4B0uw-YMmnUsDxX2cpSEPv4d9qLn-3cg1BLxz7GHgVsmJwnSww4WjvEtDkmXMoAZZPJ_dYyAHyVDLAbYX5uAcGoQu3PjmF-Ti9pb9oDv_a2_J4WD6J8QalLVgayM8nSEprLDYEL7BY5l71ft68TczRkAgKTyeEHz2EZQ3V_k8ikL3F207Q/s1599/WhatsApp%20Image%202026-03-10%20at%2012.15.19.jpeg" alt="slider2">
-    </div>
-    <!-- Logo on top -->
-    <div class="logo-top">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqYVs8I-_xlyaHJZHzSwke_4YcmY16XFttyL_L9Aor5CUvRNkdCVFq8aI70kT3xvMMAdjAjeaB5QD3eqjEaUSYsK_3eC_u9b793iU2vKhxrmMWJcD7JPCEtEiY-eDNMf3E6Y3WK_i0OjsKWUa8gC2Lps2Rdi5gnPduhiuwNdxKImoONDsAw9IDJaaUuTM/s612/WhatsApp_Image_2026-03-10_at_11.54.05-removebg-preview.png" alt="logo">
-    </div>
+<!-- Header Image Slider -->
+<div class="header-slider">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJuGRVEod3SpwMemXfMexFtq_Y_cmnSJO4JfE3wyODazGfqYCpeF0pwMNIBe_3iotZrmtQPYIfQYztn_CjSZM65CVNkTJnpDms42uxHySjMQtpOvHxTFNgzMEwkFCcu1c6yHBiCS1f0bkldEaNYSh-lQr3Q1yZK9j2hzv5w_XDvbAM2gFE_0PX6pjxOnU/s1599/WhatsApp%20Image%202026-03-10%20at%2012.15.19%20(1).jpeg" class="active" alt="slider1">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3pc3yvtKTA4B0uw-YMmnUsDxX2cpSEPv4d9qLn-3cg1BLxz7GHgVsmJwnSww4WjvEtDkmXMoAZZPJ_dYyAHyVDLAbYX5uAcGoQu3PjmF-Ti9pb9oDv_a2_J4WD6J8QalLVgayM8nSEprLDYEL7BY5l71ft68TczRkAgKTyeEHz2EZQ3V_k8ikL3F207Q/s1599/WhatsApp%20Image%202026-03-10%20at%2012.15.19.jpeg" alt="slider2">
 </div>
 
 <!-- Content -->
@@ -105,7 +70,7 @@ body {
 </div>
 
 <script>
-// Automatic Slider
+// Simple Automatic Slider
 const slides = document.querySelectorAll('.header-slider img');
 let current = 0;
 
