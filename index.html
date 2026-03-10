@@ -1,130 +1,108 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Furniture Clinic</title>
 
 <style>
-
-body{
-margin:0;
-font-family: Arial, sans-serif;
-background:#f5f5f5;
-text-align:center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
 }
 
-/* Top Header */
+/* Header */
+.top-logo {
+    position: sticky;
+    top: 0;
+    background: #F4A460; /* কাঁঠালি কালার */
+    padding: 25px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-.top-logo{
-position:sticky;
-top:0;
-background:#F4A460; /* কাঁঠালি কালার */
-padding:25px 0;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+/* Rotating Circle Wrapper */
+.logo-circle-wrapper {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    position: relative;
 }
 
 /* Rotating Circle */
-
-.logo-circle{
-width:170px;
-height:170px;
-border-radius:50%;
-margin:auto;
-background:conic-gradient(
-red,
-orange,
-yellow,
-green,
-cyan,
-blue,
-purple,
-red
-);
-display:flex;
-align-items:center;
-justify-content:center;
-animation:spin 5s linear infinite;
+.logo-circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red, orange, yellow, green, cyan, blue, purple, red
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Logo Wrapper (এই অংশ ঘুরবে না) */
-
-.logo-inner{
-width:145px;
-height:145px;
-background:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+/* Logo Image stays static */
+.logo-inner {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* stay above rotating circle */
+    z-index: 2;
 }
 
-/* Logo Image */
-
-.logo-inner img{
-width:135px;
-height:135px;
-border-radius:50%;
-object-fit:cover;
+.logo-inner img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Animation */
-
-@keyframes spin{
-0%{ transform: rotate(0deg); }
-100%{ transform: rotate(360deg); }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Text Section */
-
-.content{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
-font-size:22px;
-line-height:1.7;
-color:#333;
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    font-size: 22px;
+    line-height: 1.7;
+    color: #333;
 }
-
 </style>
-
 </head>
-
 <body>
 
 <!-- Header Logo -->
-
 <div class="top-logo">
-
-<div class="logo-circle">
-
-<div class="logo-inner">
-
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8-kFFlbmAjqLFjuzPY12eQz0ekzHceYVMl4ROIycO2LitEJti-yl3S1usI81g-T7m_GXhvknNi0-HKf5_8qEkuf-RXo-0I6pMbC7dIQNPFlbI0opiiPyBtSm4TCl2vw0nFTHY9dAzsTeYMbbWBk-NcFp5R_n-sryO1fvoOhTEfY5ori7KuiWx-ZUAjWM/s612/WhatsApp_Image_2026-03-10_at_11.54.05-removebg-preview.png" alt="logo">
-
+    <div class="logo-circle-wrapper">
+        <div class="logo-circle"></div>
+        <div class="logo-inner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8-kFFlbmAjqLFjuzPY12eQz0ekzHceYVMl4ROIycO2LitEJti-yl3S1usI81g-T7m_GXhvknNi0-HKf5_8qEkuf-RXo-0I6pMbC7dIQNPFlbI0opiiPyBtSm4TCl2vw0nFTHY9dAzsTeYMbbWBk-NcFp5R_n-sryO1fvoOhTEfY5ori7KuiWx-ZUAjWM/s612/WhatsApp_Image_2026-03-10_at_11.54.05-removebg-preview.png" alt="logo">
+        </div>
+    </div>
 </div>
-
-</div>
-
-</div>
-
 
 <!-- Content -->
-
 <div class="content">
-
 আপনার ব্যবহৃত ফার্নিচার কি পুরাতন হয়ে গেছে?<br><br>
-
 ফার্নিচারের গ্লেজ কি আগের মত নেই?<br><br>
-
 ফার্নিচারে ঘুন পোকা ফুটো করে দিয়েছে বা ফার্নিচার কোনভাবে ভেঙে গেছে কিংবা দাগ পড়ে গেছে?<br><br>
-
 আজই আমাদের সাথে যোগাযোগ করুন এবং স্বল্প খরচে আপনার ফার্নিচারকে আগের মত নতুন বানিয়ে ফেলুন।<br><br>
-
 আপনার বাসায় গিয়ে অভিজ্ঞ মিস্ত্রি দিয়ে সম্পূর্ণ কাজ করে দেয়া হবে।
-
 </div>
 
 </body>
