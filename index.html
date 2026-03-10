@@ -13,39 +13,31 @@ body {
     text-align: center;
 }
 
-/* Header Image Slider */
-.header-slider {
+/* Top Image */
+.top-image {
     width: 100%;
     max-width: 900px;
-    height: 250px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px auto 40px auto;
+    border: 3px solid #FFD700; /* হলুদ আউটলাইন */
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-/* Slider Images */
-.header-slider img {
+/* Bottom Image */
+.bottom-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-}
-
-.header-slider img.active {
-    opacity: 1;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    border: 3px solid #FFD700; /* হলুদ আউটলাইন */
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 /* Text Section */
 .content {
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 20px;
     font-size: 22px;
     line-height: 1.7;
     color: #333;
@@ -54,11 +46,8 @@ body {
 </head>
 <body>
 
-<!-- Header Image Slider -->
-<div class="header-slider">
-    <img src="images/slider1.jpg" class="active" alt="slider1">
-    <img src="images/slider2.jpg" alt="slider2">
-</div>
+<!-- Top Image -->
+<img src="images/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmM3Ie7yXpm1WskpDbMWJGXg6DGz9n5GmddRumEe57pRjqhSekA1_OtcIjR0ZH7XeARjlZLkDQyAhkKlE8I7JqjyXLH4LvIyX2Eem-vo2wC5-Q0sl-S3kvr4q8G-Ht6jsc4chlYY9i53j76lMNYvPjQGlL9a_GV2MQFbDHqJU6Q5thN6-WBhvYWh7KZrs/s1920/ezgif.com-webp-maker%20(34).webp" alt="Top Picture" class="top-image">
 
 <!-- Content -->
 <div class="content">
@@ -69,17 +58,8 @@ body {
 আপনার বাসায় গিয়ে অভিজ্ঞ মিস্ত্রি দিয়ে সম্পূর্ণ কাজ করে দেয়া হবে।
 </div>
 
-<script>
-// Simple Automatic Slider
-const slides = document.querySelectorAll('.header-slider img');
-let current = 0;
-
-setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-}, 2000); // ২ সেকেন্ড
-</script>
+<!-- Bottom Image -->
+<img src="images/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2sJi9W36QIFZzApplvUtyJKWL0wsa7p0zsSIStxv9arcLkBm9Qt5PELWyAmOHaigm187mryEmE42qlZ5QJK0-qmO9Zmjjvg1r7Q5Fn8EkIovGzKVcAxKlOpgeNVp-eFjJyIpmZOB7Ir3Y-u-xpIhHPMRmAIe0n17jqOygdEv7bNuKlO_V5HS_b4oKuFQ/s1920/ezgif.com-webp-maker%20(33).webp" alt="Bottom Picture" class="bottom-image">
 
 </body>
 </html>
