@@ -49,7 +49,54 @@ line-height:1.7;
 color:#333;
 }
 
-/* Normal Button */
+/* Premium Points */
+
+.points-box{
+max-width:900px;
+margin:auto;
+padding:10px 20px;
+}
+
+.point{
+display:flex;
+flex-direction:column;
+font-size:23px;
+font-weight:700;
+color:#000;
+margin-bottom:10px;
+}
+
+.point-text{
+display:flex;
+align-items:flex-start;
+gap:10px;
+}
+
+.point svg{
+width:26px;
+height:26px;
+flex-shrink:0;
+margin-top:4px;
+}
+
+/* Animated Line */
+
+.wave-line{
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#000,#555,#000);
+border-radius:10px;
+margin-top:6px;
+animation:waveBlink 1s infinite;
+}
+
+@keyframes waveBlink{
+0%{opacity:0}
+50%{opacity:1}
+100%{opacity:0}
+}
+
+/* Buttons */
 
 .contact-btn{
 display:inline-block;
@@ -63,8 +110,6 @@ border:2px solid red;
 border-radius:10px;
 cursor:pointer;
 }
-
-/* Bottom Button */
 
 .bottom-btn{
 display:inline-block;
@@ -113,8 +158,6 @@ font-weight:bold;
 cursor:pointer;
 }
 
-/* WhatsApp */
-
 .whatsapp-btn{
 display:inline-block;
 padding:12px 25px;
@@ -137,7 +180,7 @@ color:#000;
 margin-top:40px;
 }
 
-/* Responsive YouTube */
+/* YouTube */
 
 .video-container{
 max-width:900px;
@@ -169,10 +212,38 @@ border:0;
 
 <button class="contact-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
 
-<div class="content">
-আপনার ব্যবহৃত ফার্নিচার কি পুরাতন হয়ে গেছে?<br><br>
-ফার্নিচারের গ্লেজ কি আগের মত নেই?<br><br>
-ফার্নিচারে ঘুন পোকা ফুটো করে দিয়েছে বা ফার্নিচার কোনভাবে ভেঙে গেছে কিংবা দাগ পড়ে গেছে?
+<div class="points-box">
+
+<div class="point">
+<div class="point-text">
+<svg viewBox="0 0 24 24" fill="black">
+<path d="M3 12l18-9-5 9 5 9z"></path>
+</svg>
+<span>আপনার ব্যবহৃত ফার্নিচার কি পুরাতন হয়ে গেছে?</span>
+</div>
+<div class="wave-line"></div>
+</div>
+
+<div class="point">
+<div class="point-text">
+<svg viewBox="0 0 24 24" fill="black">
+<path d="M3 12l18-9-5 9 5 9z"></path>
+</svg>
+<span>ফার্নিচারের গ্লেজ কি আগের মত নেই?</span>
+</div>
+<div class="wave-line"></div>
+</div>
+
+<div class="point">
+<div class="point-text">
+<svg viewBox="0 0 24 24" fill="black">
+<path d="M3 12l18-9-5 9 5 9z"></path>
+</svg>
+<span>ফার্নিচারে ঘুন পোকা ফুটো করে দিয়েছে বা ফার্নিচার কোনভাবে ভেঙে গেছে কিংবা দাগ পড়ে গেছে?</span>
+</div>
+<div class="wave-line"></div>
+</div>
+
 </div>
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhe7gNbf2NrBeA3Mc43eeA1r4Km1-zJd1gitDWVhSWl2s3nCN-HMC8WdTiWFgghD8A_E1gpoMBNfyl1EDLwpqkTsL_wsoDd-w-qAXXD8HC-yTlJnvXeFBfSn0N_ugffZEhnVOWAgoMU-8Q6dHukrZIlc1lzqye05FA3-uiN8VqyJB4NL_PP5MP97QNBGI/s1920/ezgif.com-webp-maker%20(36).webp">
@@ -197,7 +268,7 @@ border:0;
 
 <div class="content" style="color:red;font-weight:bold;">
 বাসাবাড়ি অফিস রেস্টুরেন্ট/হোটেলের পুরাতন বৃদ্ধ ফার্নিচার আবার নতুনের ছোঁয়া দিতে চাইলে বা 
-<span style="color:black;">সেই ফার্নিচার একটি নির্দিষ্ট দমে আমাদের কাছে বিক্রি করতে চাইলে</span> 
+<span style="color:black;">সেই ফার্নিচার একটি নির্দিষ্ট দমে আমাদের কাছে বিক্রি করতে চাইলে</span>
 আমাদের নাম্বারে যোগাযোগ করুন।
 </div>
 
@@ -213,10 +284,7 @@ border:0;
 বর্তমানে আমাদের সার্ভিস শুধু রাজশাহী সিটিতে এভেলেবেল
 </div>
 
-<!-- MODAL -->
-
 <div id="contactModal" class="modal">
-
 <div class="modal-content">
 
 <span class="close-btn" onclick="closeModal()">&times;</span>
