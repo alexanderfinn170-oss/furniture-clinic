@@ -6,194 +6,248 @@
 <title>Furniture Clinic</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    text-align: center;
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+text-align:center;
 }
 
-/* Company Name Above First Image */
-.company-name {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff; /* সাদা রঙ */
-    -webkit-text-stroke: 1px #000000; /* চিকন কালো আউটলাইন */
-    margin: 0 auto 5px auto; /* ছবির সাথে খুব কাছাকাছি */
-    display: inline-block;
+/* Company Name */
+.company-name{
+font-size:36px;
+font-weight:bold;
+color:#fff;
+-webkit-text-stroke:1px #000;
+margin:0 auto 5px auto;
+display:inline-block;
 }
 
-/* All Images */
-img {
-    width: 100%;
-    max-width: 900px;
-    border: 3px solid #FFD700; /* হলুদ আউটলাইন */
-    border-radius: 5px;
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto 10px auto; /* ছবির নিচে বেশি গ্যাপ না */
+/* Images */
+img{
+width:100%;
+max-width:900px;
+border:3px solid #FFD700;
+border-radius:5px;
+box-sizing:border-box;
+display:block;
+margin:0 auto 10px auto;
 }
 
-/* Text Sections */
-.content {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    font-size: 22px;
-    line-height: 1.7;
-    color: #333;
+/* Text */
+.content{
+max-width:900px;
+margin:auto;
+padding:20px;
+font-size:22px;
+line-height:1.7;
+color:#333;
 }
 
-/* Button Style */
-.contact-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #FFD700;
-    color: #000;
-    border: 2px solid red;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* Normal Button */
+.contact-btn{
+display:inline-block;
+padding:12px 25px;
+margin-bottom:20px;
+font-size:20px;
+font-weight:bold;
+background:#FFD700;
+color:#000;
+border:2px solid red;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
 }
 
-.contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+.contact-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Bottom Button */
+.bottom-btn{
+display:inline-block;
+padding:12px 25px;
+margin-top:15px;
+margin-bottom:30px;
+font-size:20px;
+font-weight:bold;
+background:#000;
+color:#fff;
+border:2px solid red;
+border-radius:10px;
+cursor:pointer;
 }
 
 /* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    text-align: center;
+.modal-content{
+background:#fff;
+margin:10% auto;
+padding:30px 20px;
+border-radius:10px;
+width:90%;
+max-width:500px;
+position:relative;
+text-align:center;
 }
 
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* WhatsApp Button */
-.whatsapp-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #25D366;
-    color: #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* WhatsApp */
+.whatsapp-btn{
+display:inline-block;
+padding:12px 25px;
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+background:#25D366;
+color:#fff;
+border-radius:10px;
+text-decoration:none;
 }
 
-.whatsapp-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+/* Video title */
+.video-title{
+font-size:32px;
+font-weight:bold;
+color:#000;
+-webkit-text-stroke:1px #FFD700;
+margin-top:40px;
 }
+
+/* Video box */
+.video-box{
+width:100%;
+max-width:900px;
+margin:auto;
+border:3px solid #FFD700;
+padding:5px;
+}
+
+.video-box iframe{
+width:100%;
+height:500px;
+border:none;
+}
+
+.service-area{
+font-size:20px;
+margin:20px;
+font-weight:bold;
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- Company Name Above First Image -->
 <div class="company-name">ফার্নিচার ক্লিনিক রাজশাহী</div>
 
-<!-- Top Image -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmM3Ie7yXpm1WskpDbMWJGXg6DGz9n5GmddRumEe57pRjqhSekA1_OtcIjR0ZH7XeARjlZLkDQyAhkKlE8I7JqjyXLH4LvIyX2Eem-vo2wC5-Q0sl-S3kvr4q8G-Ht6jsc4chlYY9i53j76lMNYvPjQGlL9a_GV2MQFbDHqJU6Q5thN6-WBhvYWh7KZrs/s1920/ezgif.com-webp-maker%20(34).webp" alt="Top Picture">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmM3Ie7yXpm1WskpDbMWJGXg6DGz9n5GmddRumEe57pRjqhSekA1_OtcIjR0ZH7XeARjlZLkDQyAhkKlE8I7JqjyXLH4LvIyX2Eem-vo2wC5-Q0sl-S3kvr4q8G-Ht6jsc4chlYY9i53j76lMNYvPjQGlL9a_GV2MQFbDHqJU6Q5thN6-WBhvYWh7KZrs/s1920/ezgif.com-webp-maker%20(34).webp">
 
-<!-- Contact Button below Top Image -->
 <button class="contact-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
 
-<!-- First Content -->
 <div class="content">
 আপনার ব্যবহৃত ফার্নিচার কি পুরাতন হয়ে গেছে?<br><br>
 ফার্নিচারের গ্লেজ কি আগের মত নেই?<br><br>
 ফার্নিচারে ঘুন পোকা ফুটো করে দিয়েছে বা ফার্নিচার কোনভাবে ভেঙে গেছে কিংবা দাগ পড়ে গেছে?
 </div>
 
-<!-- New Image after this text -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhe7gNbf2NrBeA3Mc43eeA1r4Km1-zJd1gitDWVhSWl2s3nCN-HMC8WdTiWFgghD8A_E1gpoMBNfyl1EDLwpqkTsL_wsoDd-w-qAXXD8HC-yTlJnvXeFBfSn0N_ugffZEhnVOWAgoMU-8Q6dHukrZIlc1lzqye05FA3-uiN8VqyJB4NL_PP5MP97QNBGI/s1920/ezgif.com-webp-maker%20(36).webp" alt="New Picture">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhe7gNbf2NrBeA3Mc43eeA1r4Km1-zJd1gitDWVhSWl2s3nCN-HMC8WdTiWFgghD8A_E1gpoMBNfyl1EDLwpqkTsL_wsoDd-w-qAXXD8HC-yTlJnvXeFBfSn0N_ugffZEhnVOWAgoMU-8Q6dHukrZIlc1lzqye05FA3-uiN8VqyJB4NL_PP5MP97QNBGI/s1920/ezgif.com-webp-maker%20(36).webp">
 
-<!-- Contact Button below New Image -->
 <button class="contact-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
 
-<!-- Continuing First Content -->
 <div class="content">
-আজই আমাদের সাথে যোগাযোগ করুন এবং স্বল্প খরচে আপনার ফার্নিচারকে আগের মত নতুন বানিয়ে ফেলুন।<br><br>
-আপনার বাসায় গিয়ে অভিজ্ঞ মিস্ত্রি দিয়ে সম্পূর্ণ কাজ করে দেয়া হবে।
+আজই আমাদের সাথে যোগাযোগ করুন এবং স্বল্প খরচে আপনার ফার্নিচারকে আগের মত নতুন বানিয়ে ফেলুন।
 </div>
 
-<!-- Second Image -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnqDaVwbWON0uK-5gCWuc3OcsIawwOkMfyzreVWy-NngH2IMl69m0mau9PyLzIYPYTgbNThbmoTRH8SR30T0afjLYtzPUfg345VHPSYzfZ-PeAHrdnRPU5QMxEDnFSEKEBRWy87xjnxyepF_UrcJyTJoKAREd2HRdDGeimD0ALAN87-IloAIy8dIOx6qE/s1920/ezgif.com-webp-maker%20(35).webp" alt="Bottom Picture">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnqDaVwbWON0uK-5gCWuc3OcsIawwOkMfyzreVWy-NngH2IMl69m0mau9PyLzIYPYTgbNThbmoTRH8SR30T0afjLYtzPUfg345VHPSYzfZ-PeAHrdnRPU5QMxEDnFSEKEBRWy87xjnxyepF_UrcJyTJoKAREd2HRdDGeimD0ALAN87-IloAIy8dIOx6qE/s1920/ezgif.com-webp-maker%20(35).webp">
 
-<!-- Contact Button below Second Image -->
 <button class="contact-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
 
-<!-- Second Content -->
 <div class="content">
-ফার্নিচার অনেক ব্যবহারের কারণে ফার্নিচারের আসল গ্লেজ এবং কালার নষ্ট হয়ে যায়, আমরা আপনাদের পুরাতন ফার্নিচার সেই আগের নতুনের রূপ ফিরিয়ে দিব, ফার্নিচারের কোন অংশ যদি ভেঙে যায় তা আবার আগের মত করে দেব এবং বার্নিশ করে আপনার ফার্নিচারকে আবার নতুন বানিয়ে দেব ইনশাআল্লাহ।
+ফার্নিচার অনেক ব্যবহারের কারণে ফার্নিচারের আসল গ্লেজ এবং কালার নষ্ট হয়ে যায়।
 </div>
 
-<!-- Third Image Placeholder -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2sJi9W36QIFZzApplvUtyJKWL0wsa7p0zsSIStxv9arcLkBm9Qt5PELWyAmOHaigm187mryEmE42qlZ5QJK0-qmO9Zmjjvg1r7Q5Fn8EkIovGzKVcAxKlOpgeNVp-eFjJyIpmZOB7Ir3Y-u-xpIhHPMRmAIe0n17jqOygdEv7bNuKlO_V5HS_b4oKuFQ/s1920/ezgif.com-webp-maker%20(33).webp" alt="Third Picture">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2sJi9W36QIFZzApplvUtyJKWL0wsa7p0zsSIStxv9arcLkBm9Qt5PELWyAmOHaigm187mryEmE42qlZ5QJK0-qmO9Zmjjvg1r7Q5Fn8EkIovGzKVcAxKlOpgeNVp-eFjJyIpmZOB7Ir3Y-u-xpIhHPMRmAIe0n17jqOygdEv7bNuKlO_V5HS_b4oKuFQ/s1920/ezgif.com-webp-maker%20(33).webp">
 
-<!-- Contact Button below Third Image -->
 <button class="contact-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
 
-<!-- Modal -->
+<!-- NEW DESCRIPTION -->
+
+<div class="content" style="color:red;font-weight:bold;">
+বাসাবাড়ি, অফিস, রেস্টুরেন্ট/হোটেলের পুরাতন বৃদ্ধ ফার্নিচার আবার নতুনের ছোঁয়া দিতে চাইলে বা
+<span style="color:black;">সেই ফার্নিচার একটি নির্দিষ্ট দমে আমাদের কাছে বিক্রি করতে চাইলে</span>
+আমাদের নাম্বারে যোগাযোগ করুন।
+</div>
+
+<button class="bottom-btn" onclick="openModal()">এখানে যোগাযোগ করুন</button>
+
+<div class="video-title">আমাদের কাজের ভিডিও</div>
+
+<div class="video-box">
+
+<!-- YOUTUBE VIDEO -->
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+
+</div>
+
+<div class="service-area">
+বর্তমানে আমাদের সার্ভিস শুধু রাজশাহী সিটিতে এভেলেবেল
+</div>
+
+<!-- MODAL -->
+
 <div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <p style="font-size:18px; line-height:1.5; margin-top:10px;">
-      আপনি যে ফার্নিচার এর কাজ করাতে চান সে ফার্নিচারের ৩/৪ টা ছবি বিভিন্ন অ্যাঙ্গেলে তুলে আমাদের হোয়াটসঅ্যাপে সেন্ড করুন।
-    </p>
-    <a href="https://wa.me/8801992284318" target="_blank" class="whatsapp-btn">WhatsApp এ পাঠান</a>
-  </div>
+<div class="modal-content">
+<span class="close-btn" onclick="closeModal()">&times;</span>
+
+<p>
+আপনি যে ফার্নিচার এর কাজ করাতে চান সে ফার্নিচারের ৩/৪ টা ছবি বিভিন্ন অ্যাঙ্গেলে তুলে আমাদের হোয়াটসঅ্যাপে সেন্ড করুন।
+</p>
+
+<a href="https://wa.me/8801992284318" target="_blank" class="whatsapp-btn">
+WhatsApp এ পাঠান
+</a>
+
+</div>
 </div>
 
 <script>
-// Modal Functions
-function openModal() {
-  document.getElementById('contactModal').style.display = 'block';
+
+function openModal(){
+document.getElementById("contactModal").style.display="block";
 }
 
-function closeModal() {
-  document.getElementById('contactModal').style.display = 'none';
+function closeModal(){
+document.getElementById("contactModal").style.display="none";
 }
 
-// Close modal when clicking outside
-window.onclick = function(event) {
-  let modal = document.getElementById('contactModal');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick=function(e){
+let modal=document.getElementById("contactModal");
+if(e.target==modal){
+modal.style.display="none";
 }
+}
+
 </script>
 
 </body>
